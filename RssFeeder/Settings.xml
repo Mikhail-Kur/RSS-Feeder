@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Setting>
+  <Url Url="https://habr.com/rss/interesting" />
+  <Proxy Proxy="" />
+  <RefreshTime RefreshTime="10" />
+  <UserName UserName="UserName" />
+  <Password Password="Password" />
+</Setting>

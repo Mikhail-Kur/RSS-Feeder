@@ -1,0 +1,40 @@
+﻿@model RssFeeder.Models.SettingsModel
+@{
+    ViewData["Title"] = "Настройки";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Settings">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RssUrl" class="control-label">Ссылка на Rss канал</label>
+                <input asp-for="RssUrl" class="form-control" type="number" />
+                <span asp-validation-for="RssUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RefreshTime" class="control-label">Частота обновления (сек)</label>
+                <input asp-for="RefreshTime" class="form-control" />
+                <span asp-validation-for="RefreshTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proxy" class="control-label">Прокси</label>
+                <input asp-for="Proxy" class="form-control" />
+                <span  class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label">Имя клиента</label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Пароль</label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

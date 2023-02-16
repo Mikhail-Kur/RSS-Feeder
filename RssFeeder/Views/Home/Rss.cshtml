@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RSS_Feeder.Data.RssItemModel>
+@{
+    ViewData["Title"] = "Rss";
+}
+
+<meta http-equiv="refresh" content="@ViewBag.RefreshTime">
+<h1>Rss</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Заголовок</th>
+            <th>Описание</th>
+            <th>Дата публикации</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                       <a href="@item.link">@item.title</a>
+                    </td>
+                    <td>@item.description</td>
+                    <td>@item.pubDate</td>
+                </tr>
+
+            }
+        }
+    </tbody>
+</table>
